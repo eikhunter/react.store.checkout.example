@@ -1,0 +1,69 @@
+/*
+|--------------------------------------------------------------------------
+| Item
+|--------------------------------------------------------------------------
+| @namespace: bsk-
+|
+*/
+@import "../../../styles/app";
+
+.bsk-Item {
+  align-items: center;
+  display: flex;
+}
+
+.bsk-Item_ImageContainer {
+  flex-shrink: 0;
+  height: 120px;
+  width: 80px;
+  margin-right: calc(var(--Grid_Gutter) * 2);
+}
+
+.bsk-Item_Image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bsk-Item_Columns {
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.bsk-Item_Column {
+  margin: 0 var(--Grid_Gutter);
+}
+
+.bsk-Item_Column-image {
+  flex-shrink: 0;
+}
+
+.bsk-Item_Column-body {
+  flex-grow: 1;
+}
+
+.bsk-Item_Column-total {
+  min-width: 80px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.bsk-Item_Title {
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.bsk-Item_Price {
+  font-family: Helvetica, 'sans-serif';
+}
+
+.bsk-Item_Total {
+  @include Font_20-24;
+
+  font-family: Helvetica, 'sans-serif';
+  font-weight: 600;
+}

@@ -1,0 +1,17 @@
+/*
+|--------------------------------------------------------------------------
+| Product
+|--------------------------------------------------------------------------
+| @namespace: prd-
+|
+*/
+@import "../../styles/app";
+
+.prd-Product {
+  padding-top: 104px;
+  padding-bottom: 40px;
+}
+
+.prd-Product_Inner {
+  @include Grid_Container;
+}

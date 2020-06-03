@@ -1,0 +1,16 @@
+/*
+|--------------------------------------------------------------------------
+| Button
+|--------------------------------------------------------------------------
+| @namespace: btn-
+|
+*/
+@import "../../../styles/app";
+
+.btn-Button {
+  @include Button-primary;
+}
+
+.btn-Button-secondary {
+  @include Button-secondary;
+}

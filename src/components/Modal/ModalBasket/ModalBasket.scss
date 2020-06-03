@@ -1,0 +1,56 @@
+/*
+|--------------------------------------------------------------------------
+| Basket
+|--------------------------------------------------------------------------
+| @namespace: mod-
+|
+*/
+@import "../../../styles/app";
+
+.mod-Basket {
+  position: relative;
+  width: 720px;
+  margin: 0 auto;
+  padding: 48px 48px 64px;
+  background-color: #fff;
+}
+
+.mod-Basket_Body {
+  overflow: scroll;
+  height: 394px;
+}
+
+.mod-Basket_Title {
+  @include Font_26-30;
+
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--Color_Brand);
+}
+
+.mod-Basket_Item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.mod-Basket_Footer {
+  margin-top: 32px;
+  text-align: right;
+}
+
+.mod-Basket_Total {
+  @include Font_26-30;
+
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.mod-Basket_Total-number {
+  font-family: Helvetica, 'sans-serif';
+  font-weight: 600;
+}

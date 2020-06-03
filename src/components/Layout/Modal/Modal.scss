@@ -1,0 +1,42 @@
+/*
+|--------------------------------------------------------------------------
+| Modal
+|--------------------------------------------------------------------------
+| @namespace: mod-
+|
+*/
+@import "../../../styles/app";
+
+.mod-Modal {
+  @include Position_Fixed;
+
+  z-index: 13;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  transition: opacity var(--Global_Transition), visibility var(--Global_Transition);
+  visibility: hidden;
+}
+
+.mod-Modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mod-Modal_Backdrop {
+  @include Position_Absolute;
+
+  cursor: pointer;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.mod-Modal_Inner {
+  @include Grid_Container;
+}
+
+.mod-Modal_Body {
+  position: relative;
+  z-index: 14;
+}

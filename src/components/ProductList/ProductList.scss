@@ -1,0 +1,22 @@
+/*
+|--------------------------------------------------------------------------
+| List
+|--------------------------------------------------------------------------
+| @namespace: prd-
+|
+*/
+.prd-List_Items {
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.prd-List_Item {
+  display: flex;
+  margin: calc(var(--Grid_Gutter) * 2) var(--Grid_Gutter) 0;
+  width: calc(3 / 12 * 100% - var(--Grid_Gutter) * 2);
+
+  &:nth-child(-n + 4) {
+    margin-top: 0;
+  }
+}

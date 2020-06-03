@@ -1,0 +1,29 @@
+/*
+|--------------------------------------------------------------------------
+| Quantity
+|--------------------------------------------------------------------------
+| @namespace: bsk-
+|
+*/
+.bsk-Quantity {
+  align-items: center;
+  display: flex;
+}
+
+.bsk-Quantity_Input {
+  padding: 4px 0 4px 14px;
+  width: 80px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Helvetica, 'sans-serif';
+  border-radius: 0;
+  border: 2px solid var(--Color_Brand);
+}
+
+.bsk-Quantity_Button {
+  width: 30px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+}
