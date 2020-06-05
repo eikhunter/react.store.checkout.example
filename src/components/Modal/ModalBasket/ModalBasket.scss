@@ -9,15 +9,23 @@
 
 .mod-Basket {
   position: relative;
-  width: 720px;
   margin: 0 auto;
-  padding: 48px 48px 64px;
+  padding: 24px 24px 32px;
   background-color: #fff;
+
+  @include sm {
+    width: 720px;
+    padding: 48px 48px 64px;
+  }
 }
 
 .mod-Basket_Body {
-  overflow: scroll;
-  height: 394px;
+  height: 320px;
+  overflow-y: scroll;
+
+  @include sm {
+    height: 394px;
+  }
 }
 
 .mod-Basket_Title {
@@ -39,8 +47,12 @@
 }
 
 .mod-Basket_Footer {
-  margin-top: 32px;
+  margin-top: 24px;
   text-align: right;
+
+  @include sm {
+    margin-top: 32px;
+  }
 }
 
 .mod-Basket_Total {

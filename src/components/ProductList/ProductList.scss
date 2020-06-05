@@ -5,18 +5,40 @@
 | @namespace: prd-
 |
 */
+@import "../../../src/styles/app";
+
 .prd-List_Items {
-  flex-wrap: wrap;
-  display: flex;
-  margin: 0 -15px;
+  @include sm {
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0 -15px;
+  }
 }
 
 .prd-List_Item {
-  display: flex;
-  margin: calc(var(--Grid_Gutter) * 2) var(--Grid_Gutter) 0;
-  width: calc(3 / 12 * 100% - var(--Grid_Gutter) * 2);
+  margin-bottom: 24px;
 
-  &:nth-child(-n + 4) {
-    margin-top: 0;
+  @include sm {
+    display: flex;
+    margin: calc(var(--Grid_Gutter) * 2) var(--Grid_Gutter) 0;
+    width: calc(6 / 12 * 100% - var(--Grid_Gutter) * 2);
+
+    &:nth-child(-n + 2) {
+      margin-top: 0;
+    }
+  }
+
+  @include lg {
+    display: flex;
+    margin: calc(var(--Grid_Gutter) * 2) var(--Grid_Gutter) 0;
+    width: calc(3 / 12 * 100% - var(--Grid_Gutter) * 2);
+
+    &:nth-child(-n + 4) {
+      margin-top: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

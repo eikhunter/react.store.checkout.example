@@ -14,9 +14,13 @@ interface Props {
 
 const ProductCard: React.FC<Props> = ({ addToBasket, product }) => {
     return (
-        <div className="prd-Card">
+        <button onClick={() => addToBasket(product)} className="prd-Card">
             <div className="prd-Card_ImageContainer">
                 <img alt={product.name} src={product.image} className="prd-Card_Image"/>
+
+                <div className="prd-Card_Overlay">
+                    <p className="prd-Card_OverlayText">Add to basket</p>
+                </div>
             </div>
 
             <div className="prd-Card_Body">
@@ -24,11 +28,7 @@ const ProductCard: React.FC<Props> = ({ addToBasket, product }) => {
 
                 <p className="prd-Card_Price">{currencyFormat(product.price, 'GBP')}</p>
             </div>
-
-            <footer className="prd-Card_Footer">
-                <Button onClick={() => addToBasket(product)} text="Add to basket"/>
-            </footer>
-        </div>
+        </button>
     );
 };
 

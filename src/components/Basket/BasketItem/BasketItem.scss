@@ -8,15 +8,26 @@
 @import "../../../styles/app";
 
 .bsk-Item {
-  align-items: center;
-  display: flex;
+  text-align: center;
+
+  @include sm {
+    align-items: center;
+    display: flex;
+    text-align: left;
+  }
 }
 
 .bsk-Item_ImageContainer {
   flex-shrink: 0;
   height: 120px;
   width: 80px;
-  margin-right: calc(var(--Grid_Gutter) * 2);
+  margin: 0 auto 16px;
+
+  @include sm {
+    margin-left: auto;
+    margin-right: calc(var(--Grid_Gutter) * 2);
+    margin-bottom: 0;
+  }
 }
 
 .bsk-Item_Image {
@@ -27,14 +38,24 @@
 }
 
 .bsk-Item_Columns {
-  flex-grow: 1;
-  align-items: center;
-  display: flex;
-  margin: 0 -15px;
+  @include sm {
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    margin: 0 -15px;
+  }
 }
 
 .bsk-Item_Column {
-  margin: 0 var(--Grid_Gutter);
+  margin-bottom: 16px;
+
+  @include sm {
+    margin: 0 var(--Grid_Gutter);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .bsk-Item_Column-image {
@@ -46,9 +67,14 @@
 }
 
 .bsk-Item_Column-total {
-  min-width: 80px;
-  margin-left: auto;
-  text-align: right;
+  display: none;
+
+  @include sm {
+    display: block;
+    min-width: 80px;
+    margin-left: auto;
+    text-align: right;
+  }
 }
 
 .bsk-Item_Column-quantity {
@@ -74,9 +100,7 @@
 }
 
 .bsk-Item_Delete {
-  position: absolute;
-  left: 50%;
-  bottom: -24px;
+  margin-top: 8px;
   padding: 0;
   background-color: transparent;
   border: none;
@@ -85,7 +109,14 @@
   font-weight: 500;
   text-transform: uppercase;
   color: var(--Color_Red);
-  transform: translateX(-50%);
+
+  @include sm {
+    position: absolute;
+    left: 50%;
+    bottom: -24px;
+    margin-top: 0;
+    transform: translateX(-50%);
+  }
 
   &:hover {
     &::before {
