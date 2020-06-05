@@ -51,6 +51,11 @@
   text-align: right;
 }
 
+.bsk-Item_Column-quantity {
+  position: relative;
+  text-align: center;
+}
+
 .bsk-Item_Title {
   font-size: 18px;
   margin-bottom: 4px;
@@ -66,4 +71,36 @@
 
   font-family: Helvetica, 'sans-serif';
   font-weight: 600;
+}
+
+.bsk-Item_Delete {
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  font-family: var(--Font_Family);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--Color_Red);
+  transform: translateX(-50%);
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background-color: var(--Color_Red);
+    height: 1px;
+    transform: scaleX(0);
+    transition: transform 0.18s;
+  }
 }

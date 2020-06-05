@@ -11,6 +11,7 @@ interface Props {
     basketItem: BasketItemType;
     basketIndex: number;
     decreaseQuantity: (index: number) => void;
+    deleteBasketItem: (index: number) => void;
     increaseQuantity: (index: number) => void;
     onQuantityInputChange: (value: string, index: number) => void;
 }
@@ -19,6 +20,7 @@ const BasketItem: React.FC<Props> = ({
                                          basketItem,
                                          basketIndex,
                                          decreaseQuantity,
+                                         deleteBasketItem,
                                          increaseQuantity,
                                          onQuantityInputChange
                                      }) => {
@@ -39,7 +41,7 @@ const BasketItem: React.FC<Props> = ({
                     </div>
                 </div>
 
-                <div className="bsk-Item_Column">
+                <div className="bsk-Item_Column bsk-Item_Column-quantity">
                     <BasketQuantity
                         basketIndex={basketIndex}
                         decreaseQuantity={decreaseQuantity}
@@ -47,6 +49,13 @@ const BasketItem: React.FC<Props> = ({
                         onQuantityInputChange={onQuantityInputChange}
                         quantity={basketItem.quantity}
                     />
+
+                    <button
+                        className="bsk-Item_Delete"
+                        onClick={() => deleteBasketItem(basketIndex)}
+                    >
+                        Remove
+                    </button>
                 </div>
 
                 <div className="bsk-Item_Column bsk-Item_Column-total">

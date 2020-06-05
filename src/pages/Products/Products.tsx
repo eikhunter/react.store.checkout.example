@@ -44,6 +44,7 @@ class Products extends React.Component<Props, State> {
                 basketItems={checkoutStore.basket}
                 basketTotalPrice={checkoutStore.basketTotalPrice}
                 decreaseBasketQuantity={checkoutStore._decreaseBasketQuantity}
+                deleteBasketItem={checkoutStore._deleteBasketItem}
                 increaseBasketQuantity={checkoutStore._increaseBasketQuantity}
                 onQuantityInputChange={checkoutStore._onQuantityInputChange}
             />;

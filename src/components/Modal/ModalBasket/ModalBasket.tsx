@@ -11,6 +11,7 @@ interface Props {
     basketItems: BasketItemType[]
     basketTotalPrice: number;
     decreaseBasketQuantity: (index: number) => void;
+    deleteBasketItem: (index: number) => void;
     increaseBasketQuantity: (index: number) => void;
     onQuantityInputChange: (value: string, index: number) => void;
 }
@@ -19,6 +20,7 @@ const ModalBasket: React.FC<Props> = ({
                                           basketItems,
                                           basketTotalPrice,
                                           decreaseBasketQuantity,
+                                          deleteBasketItem,
                                           increaseBasketQuantity,
                                           onQuantityInputChange
                                       }) => {
@@ -36,6 +38,7 @@ const ModalBasket: React.FC<Props> = ({
                                 basketItem={item}
                                 basketIndex={index}
                                 decreaseQuantity={decreaseBasketQuantity}
+                                deleteBasketItem={deleteBasketItem}
                                 increaseQuantity={increaseBasketQuantity}
                                 onQuantityInputChange={onQuantityInputChange}
                             />
